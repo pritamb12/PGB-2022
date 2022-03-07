@@ -88,13 +88,12 @@ public class Employee {
       		}
 		
 		//NumberFormat Exception
-		int emp;
-		System.out.println("\nEnter emp:");
-		 emp=sc.nextInt();
+		//System.out.println("\nEnter emp:");
+		//int emp=sc.nextInt();
 		while(true) {
 			System.out.println("\nEnter any valid Integer: ");
 			 try {
-              emp = Integer.parseInt(sc.next());
+				  int emp = Integer.parseInt(sc.nextLine());
               
               System.out.println("You entered: "+ emp);
               break;
