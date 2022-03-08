@@ -4,6 +4,8 @@ import day3.*;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.function.Function;
+
 
 class printEmpDetails {
 	printEmpDetails(Employee e) {
@@ -33,6 +35,8 @@ class EmpReg implements Runnable{
 	int Id;
 	String grp;
 	List<String> givenList = Arrays.asList("A","B","C","D","E","F");
+	// Using Function to get Employee ID
+	static Function<Integer, Integer> AssignID = a -> 10000-a;
 	
     public EmpReg(int id) {
         this.Id = id;
@@ -45,7 +49,8 @@ class EmpReg implements Runnable{
 		for (int i = Id;i < Id+30;i++ ) {
 			grp = givenList.get(rand.nextInt(givenList.size()));
 			// Synchronized Method
-			Training.assign_to_group(grp, 10000-i,"Employee"+i);
+			
+			Training.assign_to_group(grp, AssignID.apply(i),"Employee_"+i);//AssignName.apply(i));
 			// System.out.println(Training.Groups.get(grp).size());
 		}
 	}
