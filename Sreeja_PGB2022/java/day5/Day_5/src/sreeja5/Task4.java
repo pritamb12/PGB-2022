@@ -21,8 +21,9 @@ public class Task4 {
 	        }
 	 
 	        System.out.println(list);
-	        list.stream().filter(x->check(x) && x<25).forEach(System.out::println);
-			List<Integer> prime = list.stream().filter(x->check(x)).collect(Collectors.toList());
+	        //list.stream().filter(x->check(x) && x<25).forEach(System.out::println);
+			List<Integer> prime = list.stream().filter(x->check(x) && x<25).collect(Collectors.toList());
+			prime.stream().map(n1->n1).forEach(System.out::println);
 			System.out.println("Printing in Descending Order");
 			List<Integer> show =
 		            prime.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
