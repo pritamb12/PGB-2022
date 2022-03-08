@@ -46,7 +46,7 @@ class EmpReg implements Runnable{
 	public void run() {
 		Random rand = new Random();
 		// Use Thread Pool to Register Employees and assign them to Different Groups
-		for (int i = Id;i < Id+30;i++ ) {
+		for (int i = Id;i < Id+20;i++ ) {
 			grp = givenList.get(rand.nextInt(givenList.size()));
 			// Synchronized Method
 			
@@ -91,9 +91,9 @@ public class BatchEmployeeRegister{
 	public static void main(String[] args) throws InterruptedException {
 		
         Runnable r1 = new EmpReg(1001);
-        Runnable r2 = new EmpReg(1031);    
-        Runnable r3 = new EmpReg(1061);
-        Runnable r4 = new EmpReg(1091);
+        Runnable r2 = new EmpReg(1021);    
+        Runnable r3 = new EmpReg(1041);
+        Runnable r4 = new EmpReg(1061);
           
         // Add a thread pool in your class. Use Executor framework
         // Create a Thread Pool With max 10 Threads

@@ -32,7 +32,7 @@ class checkPrime{
 
 public class Program {
 	static int min = 1;
-	static int max = 100;
+	static int max = 30;
 	static int[] ints = new int[10];
 	
 	public static void main(String[] args) {
@@ -56,7 +56,7 @@ public class Program {
 		Predicate<Integer> numlessthan25 = num -> num < 25;
 		Predicate<Integer> numgreaterthan0 = num -> num > 0;
 		
-		System.out.println("Given List :" +list);;
+		System.out.println("Given List :" +list+"\nPrinting Prime Numbers in Descending Order : ");;
 		
 		list.stream()
 			.map(x -> checkPrime.isPrime(x)) 	// Using .map() to get all prime numbers
