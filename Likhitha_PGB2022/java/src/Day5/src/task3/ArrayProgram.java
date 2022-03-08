@@ -33,7 +33,8 @@ public class ArrayProgram {
 	 System.out.println("Print the prime numbers using map.stream");
 	 
 	 
-	 System.out.println(li.stream().filter(ArrayProgram::isPrime).collect(toList()));
+	 List<Integer> l=li.stream().filter(ArrayProgram::isPrime).collect(toList());
+	 l.stream().map(n1->n1).forEach(System.out::println);
 	 
 	 System.out.println("Printing prime numbers less than 25 using stream filter");
 	 
