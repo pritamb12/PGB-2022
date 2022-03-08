@@ -44,6 +44,7 @@ class EmpReg implements Runnable{
 		// Use Thread Pool to Register Employees and assign them to Different Groups
 		for (int i = Id;i < Id+30;i++ ) {
 			grp = givenList.get(rand.nextInt(givenList.size()));
+			// Synchronized Method
 			Training.assign_to_group(grp, 10000-i,"Employee"+i);
 			// System.out.println(Training.Groups.get(grp).size());
 		}
