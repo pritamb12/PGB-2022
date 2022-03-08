@@ -1,6 +1,0 @@
-package sowmya3;
-abstract class AbstractDemo
-{
-	abstract void demo();
-}
-	
