@@ -4,30 +4,24 @@ import java.util.*;
 import java.util.function.Supplier;
 import java.util.function.Predicate;
 import java.util.function.Consumer; 
+
  
 public class StreamsDemo {
+	
 	public static void main(String args[])
 	{
 		Integer a[]= {55,96,65,61,53,20,13,11,5,93};
-		List<Integer> l=Arrays.asList(a);
-		System.out.println("Printing Prime and Composite numbers(using map):");
-		l.stream().map(n->n).forEach(System.out::println);
-		System.out.println("The Primes less than 25 are(using filter):");
-		l.stream().filter(p->validate(p) && p<25).forEach(System.out::println);
-		List<Integer> prime = l.stream().filter(p->validate(p)).collect(Collectors.toList());
-		List<Integer> show = prime.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-		System.out.println("The prime numbers in the given input are(using sort):" +show);
-		int add =l.stream().reduce(0,(ans,i)-> ans+i);
-		System.out.println("The reduced value is(using reduce): "+add);	
+		List<Integer> list=Arrays.asList(a);
+		System.out.println("Elements: " + list);
+		System.out.println("Primes less than 25 in descending order: ");
+		list.stream().map(x -> isPrime(x)).filter(x -> x<=25).sorted(Comparator.reverseOrder()).forEach(x -> System.out.println(x+ " "));	
 	}
-	private static Boolean validate(Integer p) {
-		int n=(int)p;
-		if(n<=1)return false;
-		for(int i=2;i*i<=n;i++)
-		{
-			if(n%i==0)
-				return false;
-		}
-		return true;	
-	}
+	public static int isPrime(int number) {
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                return 99999;
+            }
+        }
+        return number;
+    }
 }
