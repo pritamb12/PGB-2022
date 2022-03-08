@@ -1,6 +1,8 @@
 Task 1:
 
 Output:
+
+
         Table name : work table
         
         Initialization Time for task name - Task 2 = 02:55:57
@@ -45,6 +47,8 @@ Output:
 
 
 Task 2:
+
+functional INterface : Predicate ,Consumer ,function, Supplier
 
 Output:
 
