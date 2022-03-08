@@ -48,6 +48,18 @@ Output:
 
 Task 2:
 
+Reference
+
+           Using Static method reference  to print Square of a number:
+           25
+           Printing sum using instance reference:
+           13
+           
+           Method referencing using Constructor:
+           I am a method of class Employee
+           I am a method of class Employee
+
+
 functional INterface : Predicate ,Consumer ,function, Supplier
 
 Output:
