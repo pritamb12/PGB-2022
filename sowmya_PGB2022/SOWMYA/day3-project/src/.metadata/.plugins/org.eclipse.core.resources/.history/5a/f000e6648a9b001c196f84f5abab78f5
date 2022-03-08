@@ -1,0 +1,19 @@
+package sowmya3;
+abstract class A{ //abstract class
+	abstract void bark();//abstract method
+	void display() {
+		System.out.println("concrete method is display");
+	}
+}
+class B extends A{
+	void bark() {
+		System.out.println("implementation of abstract method (display) by extending the class");
+	}
+}
+public class AbstractDemo{
+	public static void main(String args[]) {
+		B obj=new B();
+		obj.bark();
+		obj.display();
+	}
+}
