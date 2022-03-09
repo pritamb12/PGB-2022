@@ -112,7 +112,7 @@ class Day1:
         print(f"Sorted cars list : {cars}")
 
     def string_operations(self):
-        print("\nSet Operations : \n")
+        print("\nString Operations : \n")
         print(f"String : '{self.dt_string}'")
         string = self.dt_string.upper()
         print(f"Converted string to uppercase : {self.dt_string}")
