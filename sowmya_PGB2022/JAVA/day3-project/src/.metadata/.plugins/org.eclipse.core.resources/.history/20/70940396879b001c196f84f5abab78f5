@@ -1,0 +1,19 @@
+package sowmya3;
+
+public class Person implements In1 {
+	public void eat() {//method1 i
+	System.out.println("person eats");
+	}
+	public void travel() {
+		System.out.println("person travels");
+	}
+	public int dance() {
+		return 0;
+	}
+	public static void main(String args[]) {
+		Person obj=new Person();
+		obj.eat();
+		obj.travel();
+	}
+
+}

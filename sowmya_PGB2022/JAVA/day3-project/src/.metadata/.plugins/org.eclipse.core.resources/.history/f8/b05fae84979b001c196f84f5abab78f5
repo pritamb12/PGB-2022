@@ -1,0 +1,46 @@
+package sowmya3;
+import java.util.HashMap;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+
+public class Extensions extends AbstractDemo implements In1 {
+	
+	public void eat() {//method1 
+	System.out.println("person eats");
+	}
+	public void travel() {//method2
+		System.out.println("person travels");
+	}
+	public void demo() {//method3
+		System.out.println("demo method");
+	}
+	Extensions(){
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();  //implements map interface  
+		hm.put(056,"sowmya");  
+		hm.put(052,"keerthana");   
+		Iterator <Integer> it = hm.keySet().iterator();       //keyset is a method  
+		while(it.hasNext())  
+		{  
+		int key=(int)it.next();  
+		System.out.println("Roll no.: "+key+"     name: "+hm.get(key));  
+		}  
+	ArrayList<String> list = new ArrayList<String>();
+    list.add("JavaFx");
+    list.add("Java");
+    Iterator iterator = list.iterator();
+    while(iterator.hasNext()) {
+       System.out.println(iterator.next());
+    }
+}
+	 
+	public static void main(String args[]) {
+		Extensions obj=new Extensions();//object creation
+		obj.eat();//calling method using object
+		obj.travel();//calling method using object
+		obj.demo();
+	}
+
+}

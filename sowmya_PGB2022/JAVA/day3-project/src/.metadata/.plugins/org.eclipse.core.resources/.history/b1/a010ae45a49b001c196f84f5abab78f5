@@ -1,0 +1,6 @@
+package sowmya3;
+
+public interface In1 {
+		public void eat();
+		public void travel();
+}
