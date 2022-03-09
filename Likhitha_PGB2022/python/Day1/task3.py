@@ -63,6 +63,9 @@ print("Return a set that contains all items from both sets, except items that ar
 
 print("Return a set that contains all items from both sets, duplicates are excluded: ",uni)
 
-setc=sety+setx
-print(setc)
+o={9,0,8}
+p={5,6,7}
+
+o.update(p)
+print(o)
 
