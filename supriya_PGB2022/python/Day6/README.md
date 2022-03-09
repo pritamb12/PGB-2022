@@ -1,5 +1,3 @@
-###OUTPUT
-
 hello python
 100
 <class 'int'>
