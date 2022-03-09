@@ -25,3 +25,4 @@ print("o is found at position",k)
 revstr2=str2[::-1]
 print("Reversed the string using slicing",revstr2)
 
+

@@ -7,6 +7,11 @@ print("30 is present",b,"number of times in tuple")
 c=a.index('hello')
 print("hello is present at index pos",c)
 
+u=('k1','k2','k3')
+v=5
+thisdict=dict.fromkeys(u,v)
+print("a dictionary with 3 different keys, all with the value '5' using inbuilt method :", thisdict)
+
 dict={1: "Hello", 2:'Python',3 : 7}
 
 print("Dictionary Created",dict)
@@ -31,4 +36,33 @@ print("Element is removed in set",set1)
 
 setx={'a','b','c',1,2,3}
 sety={1,2,3,'x','y','z'}
+
+onlysetx=setx-sety
+print("Elements only present in setx:",onlysetx)
+
+comm=setx&sety
+setx=[ele for ele in setx if ele not in comm]
+sety=[ele for ele in sety if ele not in comm]
+
+print("Removed the items that are common in both sets",setx,sety)
+
+print("Checking elements present in 2 sets are equal or not:",setx==sety)
+
+seta={1,2,3,6}
+setb={1,2,3,7,9,6}
+
+print("Return True if all items in set x are present in set y: ",setx<=sety)
+
+print("Return True if all items in set y are present in set x:", sety<=setx)
+
+uni=seta|setb
+inter=seta&setb
+
+print("Return a set that contains all items from both sets, except items that are present in both sets: ",uni-inter)
+
+
+print("Return a set that contains all items from both sets, duplicates are excluded: ",uni)
+
+setc=sety+setx
+print(setc)
 
