@@ -3,21 +3,21 @@
 class Day1:
     def __init__(self):
         # Define variables for each data type and store respective data
-        self.Dict = {"key1": "Value1", "key2": "Value2"}
-        self.List = [1, 2, 3, 4, 5, 6, "seven"]
-        self.Integer = 1
-        self.String = "hello"
-        self.Set = {"value1", "value2", "value3"}
-        self.Tuple = 1, 2, 3, 4, 5, 7, 7
-        self.FrozenSet = frozenset(self.Tuple)
+        self.dt_dict = {"key1": "Value1", "key2": "Value2"}
+        self.dt_list = [1, 2, 3, 4, 5, 6, "seven"]
+        self.dt_integer = 1
+        self.dt_string = "hello"
+        self.dt_set = {"value1", "value2", "value3"}
+        self.dt_tuple = 1, 2, 3, 4, 5, 7, 7
+        self.dt_frozenSet = frozenset(self.dt_tuple)
         print("\nInitialized Datatypes : \n")
-        print(f"Dictionary : {self.Dict}")
-        print(f"List : {self.List}")
-        print(f"Integer : {self.Integer}")
-        print(f"String : {self.String}")
-        print(f"Set : {self.Set}")
-        print(f"Tuple : {self.Tuple}")
-        print(f"FrozenSet : {self.FrozenSet}")
+        print(f"Dictionary : {self.dt_dict}")
+        print(f"List : {self.dt_list}")
+        print(f"Integer : {self.dt_integer}")
+        print(f"String : {self.dt_string}")
+        print(f"Set : {self.dt_set}")
+        print(f"Tuple : {self.dt_tuple}")
+        print(f"FrozenSet : {self.dt_frozenSet}")
 
     def override(self):
         print("\nOverriding Datatypes : \n")
@@ -58,31 +58,31 @@ class Day1:
     def mutable_immutable(self):
         # Updating Datatypes
         print("\nList Mutable and Immutable Datatypes : \n")
-        self.Dict["key1"] = "Value3"
-        print(self.Dict)
+        self.dt_dict["key1"] = "Value3"
+        print(self.dt_dict)
         print("Dictionary is Mutable")
-        self.List.append("eight")
-        print(self.List)
+        self.dt_list.append("eight")
+        print(self.dt_list)
         print("List is Mutable")
-        print(self.Integer)
-        self.Integer += 2
+        print(self.dt_integer)
+        self.dt_integer += 2
         print("Integer is Immutable")
-        print(self.String)
-        self.String += " world"
-        print(self.String)
+        print(self.dt_string)
+        self.dt_string += " world"
+        print(self.dt_string)
         print("String is Immutable")
-        print(self.Set)
-        self.Set.add("value4")
-        print(self.Set)
+        print(self.dt_set)
+        self.dt_set.add("value4")
+        print(self.dt_set)
         print("Set is Mutable")
         try:
-            self.Tuple.append("9")
+            self.dt_tuple.append("9")
         except:
             print("Tuple Is Immutable")
         finally:
-            print(self.Tuple)
+            print(self.dt_tuple)
         try:
-            self.FrozenSet.append(2)
+            self.dt_frozenSet.append(2)
         except:
             print("FrozenSet Is Immutable")
 
@@ -113,55 +113,58 @@ class Day1:
 
     def string_operations(self):
         print("\nSet Operations : \n")
-        print(f"String : {self.String}")
-        String = self.String.upper()
-        print(f"Converted string to uppercase : {self.String}")
-        String = self.String.lower()
-        print(f"Converted string to lowercase : {self.String}")
-        print(f"Count of letter 'o' in string : {String.count('o')}")
-        print(f"Check if string ends with 'd' : {String.endswith('d')}")
-        print(f"Check if all characters in string is alphabet : {self.String.isalpha()}")
-        print(String.title())
-        print(f"Convert the first character of each word to upper case : {String}")
-        print(self.String.capitalize())
-        print(f"Convert the first character to upper case : {self.String}")
-        print(String.find("l"))
-        print(String[::-1])
+        print(f"String : '{self.dt_string}'")
+        string = self.dt_string.upper()
+        print(f"Converted string to uppercase : {self.dt_string}")
+        string = self.dt_string.lower()
+        print(f"Converted string to lowercase : {self.dt_string}")
+        print(f"Count of letter 'o' in string : {string.count('o')}")
+        print(f"Check if string ends with 'd' : {string.endswith('d')}")
+        print(f"Check if all characters in string is alphabet : {self.dt_string.isalpha()}")
+        print(string.title())
+        print(f"Convert the first character of each word to upper case : {string}")
+        print(self.dt_string.capitalize())
+        print(f"Convert the first character to upper case : {self.dt_string}")
+        print(f'Search the string for a specified value and returns the position of where it was found : {string.find("l")}')
+        print(f'Reverse the string with slicing : {string[::-1]}')
 
     def tuple_operations(self):
         print("\nTuple Operations : \n")
-        print(f"Count of value 7 in Tuple : {self.Tuple.count(7)}")
-        print(f"Get index of value 3 in Tuple : {self.Tuple.index(3)}")
+        print(f"Tuple : {self.dt_tuple}")
+        print(f"Count of value 7 in Tuple : {self.dt_tuple.count(7)}")
+        print(f"Get index of value 3 in Tuple : {self.dt_tuple.index(3)}")
 
     def dictionary_operations(self):
         print("\nDictionary Operations : \n")
         dict_list = "key1", "key2", "key3"
         print("Create a dictionary with 3 different keys, all with the value '5' using inbuilt method")
-        Dict1 = dict.fromkeys(dict_list, 5)
-        print(Dict1)
-        print(f"Return the value of the specified key : {Dict1['key1']}")
-        print(f"Print all key, value pairs : {Dict1.items()}")
+        dict1 = dict.fromkeys(dict_list, 5)
+        print(f"Dictionary : {dict1}")
+        print(f"Return the value of the specified key : {dict1['key1']}")
+        print(f"Print all key, value pairs : {dict1.items()}")
         print("Remove the element with the specified key : ")
-        del Dict1["key2"]
-        Dict1["key4"] = 6
-        print(Dict1)
+        del dict1["key2"]
+        dict1["key4"] = 6
+        print(dict1)
         print("Remove the last inserted key-value pair")
-        Dict1.popitem()
-        print(Dict1)
+        dict1.popitem()
+        print(dict1)
 
     def set_operations(self):
         print("\nSet Operations  : \n")
-        print(self.Set)
-        self.Set.add(10)
-        print(f"Added an element to the set : {self.Set}")
-        self.Set.remove(10)
-        print(f"Remove specific element from the set : {self.Set}")
+        print(f"Set : {self.dt_set}")
+        self.dt_set.add(10)
+        print(f"Added an element to the set : {self.dt_set}")
+        self.dt_set.remove(10)
+        print(f"Remove specific element from the set (10): {self.dt_set}")
 
     def two_sets_operations(self):
         print("\nTwo Sets Operations : \n")
-        print("create 2 sets x and y : ")
         x = {1, 2, 3, 4, 5, 7}
         y = {6, 7, 8, 9, 10, 11}
+        print("Create 2 sets x and y : ")
+        print("x = ", x)
+        print("y = ", y)
         print(f"Return a set that contains the items that only exist in set x, and not in set y : {x.difference(y)}")
         print("Remove the items that exist in both sets : ")
         x.difference_update(y)
@@ -169,7 +172,7 @@ class Day1:
         print(f"Items that exist in both sets : {x.intersection(y)}")
         print(f"Return True if no items in set x is present in set y : {x.isdisjoint(y)}")
         print(f"Return True if all items in set x are present in set y : {x.issubset(y)}")
-        print(f"Return True if all items set y are present in set x : {y.issubset(x)}")
+        print(f"Return True if all items set y are present in set x : {x.issuperset(y)}")
         print(f"Return a set that contains all items from both sets, except items that are present in both sets : {x.symmetric_difference(y)}")
         print(f"Remove the items that are present in both sets, AND insert the items that is not present in both sets : ")
         x.symmetric_difference_update(y)
