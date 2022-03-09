@@ -153,4 +153,5 @@ print(myset.symmetric_difference_update(myset2))
 #Return a set that contains all items from both sets, duplicates are excluded
 print(myset.union(myset2))
 #Insert the items from set y into set x
-print(myset.update(myset2))
+myset.update(myset2)
+print(myset)
