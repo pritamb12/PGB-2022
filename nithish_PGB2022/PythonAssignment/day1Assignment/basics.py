@@ -126,7 +126,7 @@ print()
 
 k=['one','two','three']
 v=[5]
-d=dict(zip(k,v*3))
+d=dict.fromkeys(k,v)
 print("printing dictionary: ",d)
 
 print("printing value of one: ",d.get('one'))
