@@ -128,10 +128,9 @@ t=tup.index("s",0,10)
 print(t)
 print("******")
 #Create a dictionary with 3 different keys, all with the value '5' using inbuilt method
-dict={}
-dict["a"]=5
-dict["b"]=5
-dict["c"]=5
+a = ("a","b","c")
+b= 5
+dict = dict.fromkeys(a,b)
 print(dict)
 #Create a dictionary
 dict={"a":5,"b":7,"c":9}
