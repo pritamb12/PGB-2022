@@ -109,18 +109,10 @@ print(tuple2.count("tester"))#Return the number of times a specified value occur
 print(tuple2.index("tester"))#Search the tuple for a specified value and returns the position of where it was found
 #Create a dictionary with 3 different keys, all with the value '5' using inbuilt method
 li =['ball', 'bat', 'helmet']
-di ={}
-for ele in li:
-    # Increase the value of key
-    # if exists
-    if ele in di:
-        di[ele]= di[ele]+1
-    else:
-          
-        # Insert the new key:value
-        # pair
-        di[ele]= 5
-print(di)
+v=5
+thisdict = dict.fromkeys(li, v)
+print(thisdict)
+
 #Create a dictionary  and and apply respective inbuilt method to
 d={'name':'python','version':3,'updatedvr':3.3}
 print(d.get('name')) #Return the value of the specified 
