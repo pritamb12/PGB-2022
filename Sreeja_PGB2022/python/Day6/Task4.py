@@ -1,11 +1,8 @@
 elements =['a', 'b', 'c']
-di ={}
-for ele in elements:
-    if ele in di:
-        di[ele]= di[ele]+1
-    else:
-        di[ele]= 1
-print(di)
+di ='10'
+x=dict.fromkeys(elements,di)
+print(x)
+
 details= {"sreeja":21,"sai":22,"vaishu":23} 
 print("Dict is",details)	
 print("value of sai:",details.get("sai"))
