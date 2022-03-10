@@ -1,3 +1,9 @@
+from datetime import date
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+import random as rand
+import string
+
 #convert string into a datetime object
 def strtodate(strdate):
     return datetime.strptime(strdate,"%b %d %Y %I:%M%p")
@@ -14,7 +20,7 @@ print("Secure OTP is",OTP)
 
 #Generating password
 characters = string.ascii_letters + string.digits + string.punctuation
-password = ''.join(random.choice(characters) for i in range(10))
+password = ''.join(rand.choice(characters) for i in range(10))
 password = rand.sample(characters, 6)
 password += rand.sample(string.ascii_uppercase, 2)     # 2 upperkeys
 password += rand.choice(string.digits)                 # 1 digit
