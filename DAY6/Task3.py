@@ -16,11 +16,11 @@ set2.add("ruby")
 print(set2)#prints  {‘android’, ‘java’, ‘ruby’, ‘python’}
 
 #string is immutable
-greeting = "Welcome to EyeHunts"
-greeting[0] = 'Hello'
-Print(greeting) #TypeError:'str' does not support item assignment
+string = "Welcome to EyeHunts"
+#string[0] = 'Hello'
+print(type(string)) #TypeError:'str' does not support item assignment
 
 #tuples are immutable
 t = ('a', 'b', 'c', 'd', 'e')
-t[0] = 'A'
-print(t) #TypeError: object doesn't support item assignment
+#t[0] = 'A'
+print(type(t)) #TypeError: object doesn't support item assignment
