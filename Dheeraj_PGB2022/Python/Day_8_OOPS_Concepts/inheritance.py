@@ -17,7 +17,7 @@ class Vehicle:
         return f
 
     def display(self):
-        return f"{self.__class__.__name__} Max Speed : {Taxi.max_speed} Mileage : {Taxi.mileage}, Capacity : {Taxi.capacity}"
+        return f"{self.__class__.__name__} Max Speed : {self.max_speed} Mileage : {self.mileage}, Capacity : {self.capacity}"
 
 
 Taxi = Vehicle(40, 50, 4)
