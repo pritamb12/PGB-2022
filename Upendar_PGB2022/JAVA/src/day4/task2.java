@@ -1,9 +1,6 @@
 package day4;
 import java.util.*;
-import java.util.ArrayList;
 import java.util.function.Consumer;
-
-import day2.student;
 class Exception2 extends Exception  
 {  
    public static void main(String[]args) {
