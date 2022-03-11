@@ -47,10 +47,7 @@ print(recursivesum())
 def display_student(name, age):
     return 'Name is {} \n Age is {}'.format(name,age)
 a=display_student
-print(a('Manideep',21))current_date=datetime.now()
-updateddate = current_date + relativedelta(months=+4)
-print(updateddate)
-
+print(a('Manideep',21))
 
 # largest number in list 
 def findlargest(l):
