@@ -1,30 +1,29 @@
-#program to create a Vehicle class with max_speed and mileage instance attributes
 class Vehicle:
-    def __init__(self,max_speed,mileage):
-        self.max_speed=max_speed
-        self.mileage=mileage
-        
-    def seating_capacity(self,capacity):
-        return f"The seating capacity for car is {capacity}"
-Type=Vehicle(150,60) #object
-print("Vehicle with maxspeed {} and mileage {}".format(Type.max_speed,Type.mileage))
-
-#a.Create a Taxi object that will inherit all of the variables and methods of the parent Vehicle class and display it.
+    def __init__(self, name, max_mileage, capacity,max_speed):
+        self.name = name
+        self.max_mileage = max_mileage
+        self.capacity = capacity
+        self.max_speed = max_speed
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+    def fare(self):
+        return self.capacity * 100
+class car(Vehicle):
+    pass
 class Taxi(Vehicle):
     pass
-taxi=Taxi(180,90)
-print("Taxi's maxspeed {} and mileage {}".format(taxi.max_speed,taxi.mileage))
 
-#b.Create a Car class that inherits from the Vehicle class. Give the capacity argument of Bus.seating_capacity() a default value of 5
-class Car(Vehicle):
-    def seating_capacity(self, capacity=5):
-        return super().seating_capacity(capacity=5)
-car=Car(160,70)
-print(car.seating_capacity())
-print("Car max speed is {} and mileage is {}".format(car.max_speed,car.mileage))
+taxi=Taxi("taxi",180,90,20)
+print("Taxi's  name {} and maxspeed {} and mileage {}".format(taxi.name,taxi.max_speed,taxi.max_mileage))
 
-#c.Define a property that must have the same value for every class instance (object)
 class Bus(Vehicle):
-    pass
-bus=Bus(200,56)
-print("Bus maxspeed is {} and mileage is {}".format(bus.max_speed,bus.mileage))
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=50)
+    def fare(self):
+        amount = super().fare()
+        amount += amount * 10 / 100
+        return amount
+
+bus= Bus("School Volvo", 180, 250 ,2550)
+print("Total Bus fare is:", bus.fare())
+print(bus.seating_capacity())
