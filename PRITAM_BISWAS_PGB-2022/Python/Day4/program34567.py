@@ -24,24 +24,24 @@ with open('file.txt', 'r') as firstfile, open('newfile.txt', 'a') as secondfile:
     for line in firstfile:
         # append content to second file
         secondfile.write(line)
-        
+
 
 """
 6. Write a Python program that reads each row of a given csv file and skip the header of the file. 
 Also print the number of rows and the field names.()
 """
-import csv
-fields = []
-rows = []
-with open('stroke_data.csv', newline='') as csvfile:
- data = csv.reader(csvfile, delimiter=' ', quotechar=',')
- # Following command skips the first row of the CSV file.
- fields = next(data)
- for row in data:
-   print(', '.join(row))
-print("\nTotal no. of rows: %d"%(data.line_num))
-print('Field names are:')
-print(', '.join(field for field in fields))
+# import csv
+# fields = []
+# rows = []
+# with open('stroke_data.csv', newline='') as csvfile:
+#  data = csv.reader(csvfile, delimiter=' ', quotechar=',')
+#  # Following command skips the first row of the CSV file.
+#  fields = next(data)
+#  for row in data:
+#    print(', '.join(row))
+# print("\nTotal no. of rows: %d"%(data.line_num))
+# print('Field names are:')
+# print(', '.join(field for field in fields))
 
 """
 7. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#". 
