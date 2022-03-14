@@ -51,5 +51,14 @@
 
 ### Program 7
 
+       T#H#E# #W#O#R#L#D# #I#S# #R#O#U#N#D#
+
 
 ### Program 8
+
+        Error Name : ZeroDivisionError
+        Error Message : division by zero
+        Error Name : ImportError
+        Error Message : cannot import name 'notexistingmethod' from 're' (/usr/lib/python3.8/re.py)
+        Error Name : IndexError
+        Error Message : list index out of range

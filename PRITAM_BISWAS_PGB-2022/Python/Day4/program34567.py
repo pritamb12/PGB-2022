@@ -1,3 +1,4 @@
+# file exception handling
 """
 3. Write a Python program that takes a text file as input and returns the number of words of a given text file.
 Note: Some words can be separated by a comma with no space.
@@ -30,18 +31,18 @@ with open('file.txt', 'r') as firstfile, open('newfile.txt', 'a') as secondfile:
 6. Write a Python program that reads each row of a given csv file and skip the header of the file. 
 Also print the number of rows and the field names.()
 """
-# import csv
-# fields = []
-# rows = []
-# with open('stroke_data.csv', newline='') as csvfile:
-#  data = csv.reader(csvfile, delimiter=' ', quotechar=',')
-#  # Following command skips the first row of the CSV file.
-#  fields = next(data)
-#  for row in data:
-#    print(', '.join(row))
-# print("\nTotal no. of rows: %d"%(data.line_num))
-# print('Field names are:')
-# print(', '.join(field for field in fields))
+import csv
+fields = []
+rows = []
+with open('stroke_data.csv', newline='') as csvfile:
+ data = csv.reader(csvfile, delimiter=' ', quotechar=',')
+ # Following command skips the first row of the CSV file.
+ fields = next(data)
+ for row in data:
+   print(', '.join(row))
+print("\nTotal no. of rows: %d"%(data.line_num))
+print('Field names are:')
+print(', '.join(field for field in fields))
 
 """
 7. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#". 
@@ -50,5 +51,12 @@ Also print the number of rows and the field names.()
 	If the file matter.txt has the following content stored in it :
 	THE WORLD IS ROUND
 """
+def insert_hash():
+    with open("matter.txt","r") as file:
+        data = file.read()
+        for char in data:
+            print(char, end="#")
+    print()
 
+insert_hash()
 
