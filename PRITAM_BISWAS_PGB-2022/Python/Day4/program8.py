@@ -1,3 +1,15 @@
+"""
+
+8. Write a class to handle below exceptions
+	a. ZeroDivisionError
+	b. ImportError
+	c. IndexError
+	d. IndentationError
+	e. ValueError
+	f. Exception
+	g. Raise any exception and handle it properly and use else, finally blocks to print something irrespective of exception
+
+"""
 class CustomException(Exception):
     pass
 
@@ -32,7 +44,7 @@ class ExceptionHandling:
 
     def IndentationError_Handler(self):
         try:
-            import importerror
+            import error1
 
         except IndentationError as e:
             print(f"Error Name : {e.__class__.__name__}" + "\n" + f"Error Message : {e}")
