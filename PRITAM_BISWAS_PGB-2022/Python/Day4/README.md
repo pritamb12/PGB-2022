@@ -32,9 +32,22 @@
 
 ### Program 5
 
+       Hello
 
 ### Program 6
 
+       Female,23.0,0,0,0,0,,
+       Female,4.0,0,0,0,0,,
+       Female,50.0,1,0,0,0,never,35.91
+       Female,13.0,0,0,0,0,,28.09
+       Male,54.0,0,0,0,0,current,
+       Male,58.0,0,0,0,0,former,46.05
+       Male,70.0,1,0,0,0,current,22.15
+       Female,28.0,0,0,0,0,current,21.95
+
+        Total no. of rows: 100
+        Field names are:
+        gender,age,diabetes,hypertension,stroke,heart, disease,smoking, history,BMI
 
 ### Program 7
 
