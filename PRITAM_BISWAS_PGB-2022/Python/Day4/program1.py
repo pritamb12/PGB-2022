@@ -63,4 +63,25 @@ for username, email, age in example_list:
     else:
         directory[username] = User(username, email)
 
+"""
+Errors: 1.compile time 2.logical 3.run time
 
+syntax errror eg.syntax missing or wrong in code
+logical error eg. wrong output
+run time(mistake is donw by user) eg.divide by zero
+
+1.try: The try block lets you test a block of code for errors.
+2.except: The except block lets you handle the error.
+3.finally: The finally block lets you execute code, regardless of the result of the try- and except blocks.
+
+syntax:
+   
+   try :
+         statement (try a/b if it fails then it will go to exception )
+   except Exception:
+         statement (it will print exception message)
+   finally:
+         statement(it will be executed if we get error as well as if we don't get the error )
+         
+
+"""
