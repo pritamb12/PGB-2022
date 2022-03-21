@@ -57,7 +57,7 @@ abstract class Insurance {
 	public double getMonthlyPrice() {
 		return monthlyPrice;
 	}
-	
+
 }
 
 public class useInsaurance {
