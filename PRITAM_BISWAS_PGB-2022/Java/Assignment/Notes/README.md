@@ -55,6 +55,7 @@ Creational Design Patterns
     Object Pool Pattern
     
     
+    observer pattern
     
     System design 
     
@@ -99,6 +100,8 @@ Creational Design Patterns
      
      acid complaint rdbms -sql
      
+     The ACID properties, in totality, provide a mechanism to ensure correctness and consistency 
+     
      types of structres - monolithic 
      
      base- no sql
@@ -117,7 +120,12 @@ Creational Design Patterns
      
      
     
+    Home page
     
+    login page
+    
+    
+    React js - is javascript libarary 
     
     
     
