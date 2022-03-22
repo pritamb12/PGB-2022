@@ -1,42 +1,41 @@
-import java.io.*;
-
 import java.util.*;
 
-class Book {
+class insaurance {
 
-    public String title;
+    public String policy_no;
 
-    public String author;
+    public String policy_name;
 
-    Book(String title, String author)
+    insaurance(String policy_no, String policy_name)
 
     {
 
-        this.title = title;
+        this.policy_no = policy_no;
 
-        this.author = author;
+        this.policy_name = policy_name;
 
     }
+
 
 }
 
-class Library {
+class Record {
 
-    private final List<Book> books;
+    private final List<insaurance> insaurance;
 
-    Library(List<Book> books)
+    Record(List<insaurance> insaurance)
 
     {
 
-        this.books = books;
+        this.insaurance = insaurance;
 
     }
 
-    public List<Book> getListOfBooksInLibrary()
+    public List<insaurance> getListOfInsauranceInRecord()
 
     {
 
-        return books;
+        return insaurance;
 
     }
 
@@ -48,39 +47,39 @@ class composition {
 
     {
 
-        Book b1
+        insaurance b1
 
-            = new Book("EffectiveJ Java", "Joshua Bloch");
+            = new insaurance("2342", "	Health Insaurance");
 
-        Book b2
+        insaurance b2
 
-            = new Book("Thinking in Java", "Bruce Eckel");
+            = new insaurance("5632", "Life Insaurance");
 
-        Book b3 = new Book("Java: The Complete Reference",
+        insaurance b3 = new insaurance("7823",
 
-                           "Herbert Schildt");
+                           "Life Insaurance");
 
-        List<Book> book = new ArrayList<Book>();
+        List<insaurance> insaurance = new ArrayList<insaurance>();
 
-        book.add(b1);
+        insaurance.add(b1);
 
-        book.add(b2);
+        insaurance.add(b2);
 
-        book.add(b3);
+        insaurance.add(b3);
 
-        Library library = new Library(book);
+        Record Record = new Record(insaurance);
 
-        List<Book> books
+        List<insaurance> insaurances
 
-            = library.getListOfBooksInLibrary();
+            = Record.getListOfInsauranceInRecord();
 
-        for (Book bk : books) {
+        for (insaurance bk : insaurances) {
 
-            System.out.println("Title : " + bk.title
+            System.out.println("POlicy_no : " + bk.policy_no
 
                                + " and "
 
-                               + " Author : " + bk.author);
+                               + " Policy name : " + bk.policy_name);
 
         }
 
