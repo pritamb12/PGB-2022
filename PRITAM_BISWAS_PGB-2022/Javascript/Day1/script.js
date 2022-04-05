@@ -1,7 +1,5 @@
 function up() {
     document.getElementById("pic").style.transform = "rotate(180deg)";
-
-
 }
 function down() {
     document.getElementById("pic").style.transform = "none";

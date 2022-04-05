@@ -119,16 +119,16 @@ Steps:
      $ sudo nginx -t
    
    
-     type url: 'localhost:80' in firefox
+      type url: 'localhost:80' in firefox
    
    
-   post man install
+      post man install
    
    
-   sudo snap install post man
+      sudo snap install post man
+    
    
-   
-   spring boot install
+      spring boot install
    
    (move file to opt folder)
    $ sudo mv spring-tool-suite-4-4.14.0.RELEASE-e4.23.0-linux.gtk.x86_64.tar.gz /opt/
@@ -140,15 +140,17 @@ Steps:
    
    (paste the below data into sts.desktop)
    
-   [Desktop Entry]
-Name=SpringSource Tool Suite
-Comment=Spring Tool Suite
-Exec=/opt/sts-4.7.0.RELEASE/SpringToolSuite4
-Icon=/opt/sts-4.7.0.RELEASE/icon.xpm
-StartupNotify=true
-Terminal=false
-Type=Application
-Categories=Development;IDE;Java;
+   
+    [Desktop Entry]
+   
+    Name=SpringSource Tool Suite
+    Comment=Spring Tool Suite
+    Exec=/opt/sts-4.7.0.RELEASE/SpringToolSuite4
+    Icon=/opt/sts-4.7.0.RELEASE/icon.xpm
+    StartupNotify=true
+    Terminal=false
+    Type=Application
+    Categories=Development;IDE;Java;
    
 
 
